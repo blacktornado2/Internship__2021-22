@@ -1,0 +1,41 @@
+.working {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 3rem;
+
+    h2 {
+        font-weight: 600;
+    }
+    .thumbnails-container {
+        padding: 4rem 0;
+
+        .thumbnail {
+            padding: 0 1rem;
+            img {
+                height: 270px;
+                width: 3500px;
+                margin-bottom: 40px;
+            }
+            h3 {
+                font-size: 1.4rem;
+                line-height: 1.6;
+                letter-spacing: -0.5px;
+            }
+            p {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .thumbnails-container {
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .thumbnail {
+            margin: 1rem;
+        }
+    }
+}

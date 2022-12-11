@@ -1,0 +1,37 @@
+.showcase {
+    background: url(../../assets/banner-1.png) no-repeat center center/cover;
+    height: clamp(400px, 50vw, 100vh);
+    display: flex;
+    justify-content: flex-end;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+
+    &__heading {
+        padding-block: Min(4rem, 10vh);
+        padding-right: 5rem;
+        color: white;
+        font-size: 6rem;
+        width: 70%;
+        line-height: 1.5;
+        text-align: right;
+        font-weight: 400;
+        span {
+            font-weight: 900;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .showcase__heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .showcase {
+        &__heading {
+            padding-right: 1rem;
+            font-size: 2.5rem;
+            width: 80%;
+        }
+    }
+}

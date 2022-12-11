@@ -1,0 +1,23 @@
+.company {
+    .parallax {
+        background-image: url("../../assets/Group-Photo.png");
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.4);
+
+        &-item {
+            padding: 1rem 4rem;
+
+            h1 {
+                font-size: 75px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+// CSS reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #35b8be;
+    --secondary-color: #546285;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+// Avoid text overflows
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+// Utility classes
+.d-flex {
+    display: flex;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: 700;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+// Buttons
+.btn {
+    display: inline-block;
+    border: 0.01rem solid rgb(210, 210, 210);
+    padding: 20px 45px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    background: url("assets/Button-Wave.svg");
+
+    &-primary {
+        border: none;
+        background-color: var(--primary-color);
+        color: white;
+
+        &:hover {
+            background-color: #31a9af;
+        }
+    }
+}

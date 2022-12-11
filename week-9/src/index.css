@@ -1,0 +1,43 @@
+:root {
+    --website-width: 1600px;
+    --primary-color: #042e3e;
+    --navbar-height: 72px;
+    --light-color: #f4f4f4;
+    --medium-color: #ccc;
+    --dark-color: #333;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: white;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}

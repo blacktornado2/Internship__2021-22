@@ -1,0 +1,72 @@
+.footer {
+    padding: 6rem 8rem;
+    background: url("../../assets/footsteps.svg") no-repeat bottom left;
+    background-size: 25%;
+    background-color: #f5fbfc;
+
+    &-container {
+        margin: auto;
+        max-width: 1200px;
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            &-item {
+                flex-direction: column;
+
+                .logo-text {
+                    font-size: 1.1rem;
+                }
+
+                &-title {
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                    letter-spacing: 1px;
+                    font-size: 13px;
+                }
+                .link {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .footer-legal {
+            justify-content: space-between;
+
+            .item2 {
+                .social-media-icon {
+                    height: 40px;
+                    width: 40px;
+                    border: 1px solid rgb(183, 183, 183);
+                    border-radius: 50%;
+                    margin: 0 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    hr {
+        color: grey;
+        margin: 4rem 0;
+    }
+
+    .logo {
+        height: 50px;
+        width: 40px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer {
+        padding: 2rem;
+
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+}

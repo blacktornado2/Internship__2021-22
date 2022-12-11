@@ -1,0 +1,48 @@
+.blog {
+    background: var(--light-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+        font-size: 4rem;
+        padding: 3rem 0rem;
+        text-align: center;
+    }
+
+    .blog-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--dark-color);
+        color: white;
+        margin: 1rem;
+        border-radius: 20px;
+        font-size: 2rem;
+        padding: 2rem 1rem;
+
+        img {
+            height: 100px;
+            width: 400px;
+        }
+
+        .blog-card-title {
+            padding: 2rem;
+        }
+    }
+}
+
+// Reponsiveness
+
+@media (max-width: 1200px) {
+    .blog {
+        .blog-card {
+            flex-direction: column;
+
+            img {
+                margin: auto;
+            }
+        }
+    }
+}

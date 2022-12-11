@@ -1,0 +1,64 @@
+.wrapperClass {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .accordian {
+        width: 1000px;
+
+        .item {
+            .title {
+                color: #2fb9c0;
+                font-weight: 300;
+                font-size: 20px;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 20px;
+                padding: 40px 15px 40px 0px;
+                border-bottom: 1px solid #f0f0f6;
+
+                .plus-box {
+                    border: 2px solid #a8a7bc;
+                    border-radius: 50%;
+
+                    .plus {
+                        padding: 0px 4px;
+                        font-size: 18px;
+                        color: #a8a7bc;
+                    }
+
+                    .rotation {
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .faq-content {
+                line-height: 1.5;
+                color: #5c5b76;
+                max-height: 0;
+                // background-color: red;
+                overflow: hidden;
+                font-size: 1rem;
+                transition: all 0.3s ease-out;
+            }
+
+            .show {
+                max-height: 999px;
+                font-size: 1rem;
+                color: #5c5b76;
+                line-height: 1.5;
+                height: auto;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        margin: 1rem;
+    }
+}

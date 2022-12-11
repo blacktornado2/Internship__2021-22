@@ -1,0 +1,13 @@
+// Variables
+
+.container {
+    max-width: var(--website-width);
+    height: 100%;
+    padding: 0 0.15rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.bold {
+    font-weight: bold;
+}

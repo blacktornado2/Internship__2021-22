@@ -1,0 +1,320 @@
+@import "config";
+@import "utilities";
+
+// General Styles
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: white;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+// Navbar
+.navbar {
+    height: $navbar-height;
+    background: $primary-color;
+    color: $light-color;
+
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+
+        &__item {
+            height: 100%;
+            padding: 0 clamp(1rem, 3vw, 4rem);
+            cursor: pointer;
+            animation: 1s ease-out 0s 1 slideInFromLeft;
+            transition: all 0.6s ease-in-out;
+            border-bottom: 2px solid transparent; //prevents layout shift
+
+            &:hover {
+                background: rgba(0, 58, 82, 0.774);
+                border-bottom: 2px solid yellow;
+            }
+
+            a {
+                height: 100%;
+                width: 100%;
+                letter-spacing: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+// Showcase
+.showcase {
+    background: url(../img/banner-1.png) no-repeat center center/cover;
+    height: clamp(400px, 50vw, 100vh);
+    display: flex;
+    justify-content: flex-end;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+
+    &__heading {
+        padding-block: Min(4rem, 10vh);
+        padding-right: 5rem;
+        color: white;
+        font-size: 4rem;
+        width: 70%;
+        line-height: 1.2;
+        text-align: right;
+        font-weight: 400;
+        span {
+            font-weight: 900;
+        }
+    }
+}
+
+// Servies
+.services {
+    padding: 2rem 0;
+    background: #f8f9fb;
+
+    &__heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 0rem;
+        color: $primary-color;
+    }
+
+    &__icon__container {
+        padding: 3rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__icon__item {
+        padding: 2rem 2rem;
+        text-align: center;
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+
+// Features
+.features {
+    background: url(../img/banner-2.png) no-repeat center center/cover;
+    color: white;
+
+    &__heading {
+        font-size: 4rem;
+        padding: 4rem 10rem;
+        width: 50%;
+        line-height: 1.2;
+    }
+
+    &__cards__container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10rem;
+    }
+
+    .feature__card {
+        padding: 2rem 10rem;
+        width: 50%;
+
+        p {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Projects
+.projects {
+    padding: 2rem 0;
+
+    &__heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 0rem;
+        color: $primary-color;
+    }
+
+    &__container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+    }
+
+    .project {
+        margin: 1rem;
+        height: 150px;
+        width: 150px;
+        background: $medium-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $primary-color;
+            color: white;
+            animation: rotateCenter 0.6s ease-in-out both;
+        }
+    }
+}
+
+// Reponsiveness
+@media (max-width: 780px) {
+    // Navbar
+    .navbar {
+        height: auto;
+
+        &__list {
+            flex-direction: column;
+
+            &__item {
+                width: 100%;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    // Showcase
+    .showcase {
+        &__heading {
+            padding-right: 1rem;
+            font-size: 2rem;
+            width: 80%;
+        }
+    }
+
+    // Servies
+    .services {
+        padding: 1rem 0;
+
+        &__heading {
+            padding: 0.5rem 0rem;
+        }
+
+        &__icon__container {
+            padding: 0;
+            flex-direction: column;
+        }
+
+        &__icon__item {
+            padding: 1rem 0;
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+
+    // Features
+    .features {
+        &__heading {
+            font-size: 2rem;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        &__cards__container {
+            padding-bottom: 5rem;
+        }
+
+        .feature__card {
+            padding: 2rem;
+            width: 100%;
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    // Projects
+    .projects {
+        padding: 1rem 0;
+
+        &__heading {
+            padding: 1rem 0rem;
+        }
+
+        &__container {
+            width: 90%;
+        }
+
+        .project {
+            margin: 0.75rem;
+        }
+    }
+}
+
+// Keyframes
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(3000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateCenter {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

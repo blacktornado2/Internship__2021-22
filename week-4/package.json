@@ -1,0 +1,14 @@
+{
+    "name": "assignmentweek-4",
+    "version": "1.0.0",
+    "description": "Website for Assignment week-4",
+    "main": "index.js",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    },
+    "author": "Ankit",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^7.0.1"
+    }
+}

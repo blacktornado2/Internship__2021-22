@@ -1,0 +1,55 @@
+.projects {
+    padding: 2rem 0;
+
+    &__heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 0rem;
+        color: var(--primary-color);
+    }
+
+    &__container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+    }
+
+    .project {
+        margin: 1rem;
+        height: 150px;
+        width: 150px;
+        background: var(--medium-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .projects {
+        padding: 1rem 0;
+
+        &__heading {
+            padding: 1rem 0rem;
+        }
+
+        &__container {
+            width: 90%;
+        }
+
+        .project {
+            margin: 0.75rem;
+        }
+    }
+}

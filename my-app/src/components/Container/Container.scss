@@ -1,0 +1,54 @@
+.container {
+    max-width: 1200px;
+    min-height: 95vh;
+    margin: auto;
+    padding: 4rem 2rem;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+    background: url("../../assets/BG-Shape-Content.svg") no-repeat;
+
+    &-item:first-child {
+        margin-right: 3rem;
+    }
+
+    .text {
+        width: 50%;
+
+        h1 {
+            letter-spacing: -1px;
+            line-height: 1;
+            padding: 1.5rem 0;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            margin-bottom: 1.5rem;
+        }
+
+        .review-section {
+            img {
+                width: 100px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    img {
+        width: 550px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+
+        &-item h1 {
+            font-size: 3rem;
+        }
+    }
+}

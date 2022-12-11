@@ -1,0 +1,337 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+    --flag-stairs-color: #a20025;
+    --flag-color-orange: #fa6801;
+    --flag-color-green: #008a00;
+    --flag-stand-color: #a0522e;
+    --flag-chakra-color: #010282;
+}
+
+
+/* Flag */
+
+.world {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 10vh;
+}
+
+.world .flag {
+    position: relative;
+}
+
+
+/* Flag cloth */
+
+.flag-cloth {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    margin-top: 10px;
+    background-color: red;
+    flex-direction: column;
+}
+
+.flag-cloth .flag-orange-color,
+.flag-cloth .flag-white-color,
+.flag-cloth .flag-green-color {
+    height: 33.3%;
+}  
+
+.flag-cloth .flag-orange-color {
+    background-color: var(--flag-color-orange);
+    border: 1px solid #cd3501;
+}
+
+.flag-cloth .flag-white-color {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.flag-white-color .ashok-chakra {
+    height: 100%;
+    width: 17.5%;
+    background-color: var(--flag-chakra-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.chakra-big {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chakra-small {
+    height: 30%;
+    width: 30%;
+    background-color: var(--flag-chakra-color);
+    border-radius: 100%;
+}
+
+.chakra-stripe {
+    position: absolute;
+    height: 70px;
+    width: 2px;
+    background-color: var(--flag-chakra-color);
+}
+
+.stripe-1 {
+    transform: rotate(15deg);
+}
+
+.stripe-2 {
+    transform: rotate(30deg);
+}
+
+.stripe-3 {
+    transform: rotate(45deg);
+}
+
+.stripe-4 {
+    transform: rotate(60deg);
+}
+
+.stripe-5 {
+    transform: rotate(75deg);
+}
+
+.stripe-6 {
+    transform: rotate(90deg);
+}
+
+.stripe-7 {
+    transform: rotate(105deg);
+}
+
+.stripe-8 {
+    transform: rotate(120deg);
+}
+
+.stripe-9 {
+    transform: rotate(135deg);
+}
+
+.stripe-10 {
+    transform: rotate(150deg);
+}
+
+.stripe-11 {
+    transform: rotate(165deg);
+}
+
+.stripe-12 {
+    transform: rotate(180deg);
+}
+
+.flag-cloth .flag-green-color {
+    background-color: var(--flag-color-green);
+    border: 1px solid #015a00;
+}
+
+
+/* Flag stand */
+.flag .flag-stand {
+    position: absolute;
+    top: 0;
+    min-height: 85vh;
+    width: 25px;
+    background-color: var(--flag-stand-color);
+    border: 1px solid #6f1e00;
+}
+
+
+/* Flag stairs */
+.flag .flag-stairs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    position: absolute;
+    left: -230px;
+    bottom: 50px;
+    width: 500px;
+    /* background-color: black; */
+}
+
+.flag-stairs > * {
+    background-color: var(--flag-stairs-color);
+    height: 33.3%;
+    width: 100%;
+    border: 1px solid rgb(92, 0, 0)
+}
+
+.flag-stairs .flag-stair-1 {
+    width: 40%;
+}
+
+.flag-stairs .flag-stair-2 {
+    width: 60%;
+}
+
+.flag-stairs .flag-stair-3 {
+    width: 80%;
+}
+
+
+/* Petal effect */
+.petal-one, .petal-two {
+    position: absolute;
+    /* display: none; */
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 128, 149);
+    border-radius: 0 50% 0 50%;
+    top: 0;
+}
+
+.petal-two {
+    background-color: red;
+}
+
+@keyframes petalAnimation1 {
+    100% {
+        top: 100vh;
+        transform: translateX(100px) rotate(360deg);
+    }
+}
+
+@keyframes petalAnimation2 {
+    100% {
+        top: 100vh;
+        transform: translateX(-100px) rotate(360deg);
+    }
+}
+
+
+
+.petals > * {
+    animation: petalAnimation1 2s linear forwards infinite;
+}
+
+.petal-1 {
+    left: 20vw;
+    animation: petalAnimation2 3s linear forwards infinite;
+}
+
+.petal-2 {
+    left: 30vw;
+    animation: petalAnimation1 1s linear forwards infinite;
+}
+
+.petal-3 {
+    left: 40vw;
+    animation: petalAnimation2 2.8s linear forwards infinite;
+}
+
+.petal-4 {
+    left: 45vw;
+    animation: petalAnimation1 3.5s linear forwards infinite;
+}
+
+.petal-5 {
+    left: 50vw;
+    animation: petalAnimation2 4s linear forwards infinite;
+}
+
+.petal-6 {
+    left: 55vw;
+    animation: petalAnimation1 1.4s linear forwards infinite;
+}
+
+.petal-7 {
+    left: 60vw;
+    animation: petalAnimation1 4.3s linear forwards infinite;
+}
+
+.petal-8 {
+    left: 65vw;
+    animation: petalAnimation2 4s linear forwards infinite;
+}
+
+.petal-9 {
+    left: 70vw;
+    animation: petalAnimation1 4s linear forwards infinite;
+}
+
+.petal-9 {
+    left: 80vw;
+    animation: petalAnimation2 4.7s linear forwards infinite;
+}
+
+.petal-10 {
+    left: 90vw;
+    animation: petalAnimation1 3.1s linear forwards infinite;
+}
+
+.petal-11 {
+    left: 5vw;
+    animation: petalAnimation2 1s linear forwards infinite;
+}
+
+.petal-12 {
+    left: 15vw;
+    animation: petalAnimation1 2s linear forwards infinite;
+}
+
+.petal-13 {
+    left: 52vw;
+    animation: petalAnimation2 4.2s linear forwards infinite;
+}
+
+.petal-14 {
+    left: 35vw;
+    animation: petalAnimation1 3s linear forwards infinite;
+}
+
+.petal-15 {
+    left: 63vw;
+    animation: petalAnimation2 4s linear forwards infinite;
+}
+
+.petal-16 {
+    left: 54vw;
+    animation: petalAnimation1 4s linear forwards infinite;
+}
+
+.petal-17 {
+    left: 56vw;
+    animation: petalAnimation2 2s linear forwards infinite;
+}
+
+.petal-18 {
+    left: 48vw;
+    animation: petalAnimation1 1.5s linear forwards infinite;
+}
+
+.petal-19 {
+    left: 73vw;
+    animation: petalAnimation2 5s linear forwards infinite;
+}
+
+.petal-20 {
+    left: 77vw;
+    animation: petalAnimation1 3.5s linear forwards infinite;
+}
+
+
